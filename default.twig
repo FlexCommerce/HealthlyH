@@ -1,0 +1,47 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header class="bk-header clearfix">
+    <div class="logo-wrap clearfix">
+         <div class="wrapper clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}      
+        </div>
+    </div>
+    <div class="clearfix menu-sz">
+        <nav class="wrapper sz-nav">
+          {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+        </nav>
+    </div>    
+</header>
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+</div>
+<footer class="clearfix">
+  <div class="bk-footer">
+    <div class="wrapper clearfix f-socialicons">
+      <div class="wrapper clearfix">
+        <div class="responsivecolumns columns-four-25-25-25-25">
+            <div class="column columns-four-first f-phone">
+                {{widget('profile', 'f-phone', { 'profileType':'phone', 'phone':'profile'})|raw}}                            
+            </div>
+            <div class="column columns-four-second f-mail">
+                {{widget('profile', 'f-mail', { 'profileType':'email', 'email':'profile'})|raw}}
+            </div>
+            <div class="column columns-four-third f-address">
+                {{widget('profile', 'f-address', { 'profileType':'address', 'address':'profile'})|raw}}
+            </div>
+            <div class="column columns-four-fourth f-time">
+                {{widget('content', 'f-content', {content: 'This is a content widget.', lines: 'all'})|raw}}
+            </div>            
+        </div>            
+      </div>
+    </div>
+  </div>
+  <div class="copy-sz">
+    <div class="wrapper clearfix f-socialicons">
+        {{widget('profile', 'f-socialicons', { 'profileType':'socialicons', 'socialicons':'profile', 'align':'widget-align-center'})|raw}}
+    </div>
+  </div>
+</footer>
+{% endblock %}

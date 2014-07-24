@@ -1,0 +1,86 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header class="bk-header clearfix">
+    <div class="logo-wrap clearfix">
+         <div class="wrapper clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}      
+        </div>
+    </div>
+    <div class="clearfix menu-sz">
+        <nav class="wrapper sz-nav">
+          {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+        </nav>
+    </div>    
+</header>
+<section class="wrapper clearfix">
+  {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
+<div class="main wrapper clearfix">
+    <section class="homemaintext-sz">
+        {{widget('content', 'maintextheader', {"content":"<h2>What we do ?</h2>"})|raw}}
+        <div class="homemaintext-sz-ico1">
+        {{widget('content', 'listintextheader1', {"content":"<h3>Help</h3>"})|raw}}
+        {{widget('content', 'listintextcontent1', {"content":"<p>Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend</p>"})|raw}}
+        </div>
+        <div class="homemaintext-sz-ico2">
+        {{widget('content', 'listintextheader2', {"content":"<h3>Care</h3>"})|raw}}
+        {{widget('content', 'listintextcontent2', {"content":"<p>Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend</p>"})|raw}}
+        </div>
+        <div class="homemaintext-sz-ico3">
+        {{widget('content', 'listintextheader3', {"content":"<h3>Treatments</h3>"})|raw}}
+        {{widget('content', 'listintextcontent3', {"content":"<p>Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend</p>"})|raw}}
+        </div>
+    </section> 
+    <section>
+        <div class="wrapper clearfix">            
+            <div class="widget responsivecolumns columns-three-33-34-33">
+                <div class="column columns-three-left">                    
+                    {{widget('content', 'left-h3', {"content":"<h2>Dapibus, mauris nec malesuada</h2>"})|raw}}
+                    {{widget('content', 'left-content', {"content":"<p>Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. Sed vel lectus</p>"})|raw}}
+                    {{widget('button', 'left-button', {text:'show more', 'align':'widget-align-center'})|raw}}
+                </div>
+                <div class="column columns-three-middle">
+                    {{widget('content', 'middle-h3', {"content":"<h2>Muris nec malesuada</h2>"})|raw}}
+                    {{widget('content', 'middle-content', {"content":"<p>Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. Sed vel lectus</p>"})|raw}}
+                    {{widget('button', 'middle-button', {text:'show more', 'align':'widget-align-center'})|raw}}
+                </div>
+                <div class="column columns-three-right">
+                    {{widget('content', 'right-h3', {"content":"<h2>Nec malesuada</h2>"})|raw}}
+                    {{widget('content', 'right-content', {"content":"<p>Cum sociis natoque penatibus et ultrices volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam. Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. Sed vel lectus</p>"})|raw}}
+                    {{widget('button', 'right-button', {text:'show more', 'align':'widget-align-center'})|raw}}
+                </div>
+            </div>
+        </div>        
+    </section>    
+    {{zone('main')|raw}}
+</div>
+<footer class="clearfix">
+  <div class="bk-footer">
+    <div class="wrapper clearfix f-socialicons">
+      <div class="wrapper clearfix">
+        <div class="responsivecolumns columns-four-25-25-25-25">
+            <div class="column columns-four-first f-phone">
+                {{widget('profile', 'f-phone', { 'profileType':'phone', 'phone':'profile'})|raw}}                            
+            </div>
+            <div class="column columns-four-second f-mail">
+                {{widget('profile', 'f-mail', { 'profileType':'email', 'email':'profile'})|raw}}
+            </div>
+            <div class="column columns-four-third f-address">
+                {{widget('profile', 'f-address', { 'profileType':'address', 'address':'profile'})|raw}}
+            </div>
+            <div class="column columns-four-fourth f-time">
+                {{widget('content', 'f-content', {content: 'This is a content widget.', lines: 'all'})|raw}}
+            </div>            
+        </div>            
+      </div>
+    </div>
+  </div>
+  <div class="copy-sz">
+    <div class="wrapper clearfix f-socialicons">
+        {{widget('profile', 'f-socialicons', { 'profileType':'socialicons', 'socialicons':'profile', 'align':'widget-align-center'})|raw}}
+    </div>
+  </div>
+</footer>
+{% endblock %}
