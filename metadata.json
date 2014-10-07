@@ -2,7 +2,7 @@
     "name":"healthlyh",
     "thumbnail":"healthlyh.png",
     "screenshot":"healthlyh.png",
-    "templateType":"general",
+    "templateType":"standard",
     "pageTypes":["default","home"],
     "tags": {
         "en": ["Business", "Trade", "company", "medic", "corporate", "doctor", "medicine", "firm", "health", "simple"]        
